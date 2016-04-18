@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+<form action="/create-message" method="post">
+    <input type="text" placeholder="Enter a message here..." name="userMessage"/>
+    <button type="submit">Enter a message</button>
+</form>
+
+<br>
+List of {{name}}'s messages:
+</br>
+{{#messages}}
+{{message}}
+<hr>
+{{/messages}}
+
+</body>
+</html>
