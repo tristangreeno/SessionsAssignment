@@ -1,15 +1,12 @@
 /**
- * Created by tristangreeno on 4/18/16.
+ * Stores the index of each message, and its content.
  */
 public class Message {
     String message;
+    Integer index;
 
-    public Message(String message){
+    public Message(String message, Integer index){
         this.message = message + "\n\n";
-    }
-
-    @Override
-    public String toString() {
-        return message;
+        this.index = index;
     }
 }

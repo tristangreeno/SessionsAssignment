@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+
+    <style>
+        div {
+            font-size: small;
+            background: transparent;
+            color: red;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
 <form action="/create-user" method="post">
-    <input type="text" placeholder="Enter your name here..." name="loginName" />
+    <input type="text" placeholder="username" name="loginName" />
+    <input type="text" placeholder="password" name="loginPassword"/>
     <button type="submit">Submit</button>
 </form>
+
+<div>
+    {{error}}
+</div>
 
 </body>
 </html>

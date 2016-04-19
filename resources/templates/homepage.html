@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styling.css">
-</head>
 <body>
 
 <form action="/create-message" method="post">
@@ -10,11 +7,26 @@
     <button type="submit">Enter a message</button>
 </form>
 
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+
+<form action="/delete-message" method="post">
+    <input type="number" placeholder="Enter index of message to be deleted..." name="messageNumber"/>
+    <button type="submit">Delete Message</button>
+</form>
+
+<form action="/edit-message" method="post">
+    <input type="number" placeholder="Enter index of message to be edited..." name="messageIndex"/>
+    <input type="text" placeholder="Enter new text..." name="editedMessage"/>
+    <button type="submit">Edit Message</button>
+</form>
+
 <br>
 List of {{name}}'s messages:
 </br>
 {{#messages}}
-{{message}}
+<b>{{index}}</b>: {{message}}
 <hr>
 {{/messages}}
 
